@@ -1,36 +1,42 @@
 from rest_framework import viewsets
+from rest_framework.views import APIView
 from django.http import HttpResponse
 from .serializers import BookSerializer
 from .models import Book
-from PIL import Image
-from rest_framework.permissions import IsAuthenticated, AllowAny
-import matplotlib.pyplot as plt
-import io
+from django.http import HttpResponse, JsonResponse
+import os
 
-import base64
-from django.core.files.base import ContentFile
 
-def base64_file(base64_string, name='1'):
-    format, imgstr = base64_string.split(';base64,')
-    ext = format.split('/')[-1]
-    return ContentFile(base64.b64decode(imgstr), name=name + "." + ext)
+import sys
+sys.path.insert(1, 'C:\\Users\\HNC\Desktop\\YT-image-upload\\django\\api')
+sys.path.insert(1, 'C:\\Users\\HNC\Desktop\\YT-image-upload\\django\\api\\apps.py')
+
+
+from apps import ApiConfig
 
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = (AllowAny,)
 
     def post(self, request, *args, **kwargs):
+        
         cover = request.data['cover']
         title = request.data['title']
-        #Book.objects.create(title=title, cover=base64_file(cover))
-        newbook = Book()
-        newbook.title = title
-        newbook.cover = base64_file(cover)
-        newbook.save()
+        
+        Book.objects.create(title=title, cover=cover)     
+        # Book.caption = 'hello'
+        # Book.save()
+        return HttpResponse({'message': 'son an cut'}, status=200)
 
-        # image_data = base64.b64decode(book.cover)
-        # my_model_instance.cool_image_field = ContentFile(image_data, 'C:\\Users\\HNC\\Desktop\\YT-image-upload\\django\\modia\\covers\\mother\\whatup.jpg')
-        # my_model_instance.save()
-        #book.save(new_name='C:\\Users\\HNC\\Desktop\\YT-image-upload\\django\\modia\\covers\\mother\\oke.jpg', new_contents=book.cover)
-        return HttpResponse({'message': 'Book created'}, status=200)
+class PredictView(APIView):
+    def get(self,request):
+        if request.method == 'GET' :
+            img_path = 'C:\\Users\\HNC\Desktop\\YT-image-upload\\django\\modia\\image.jpg'
+            if os.path.exists(img_path):
+                text = ApiConfig.getClass.getCap(img_path)
+                os.remove(img_path)
+            else:
+                text = "IMAGE DOESN'T SEND YET"
+            
+            return JsonResponse({'caption' : text})
+

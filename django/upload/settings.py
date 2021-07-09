@@ -25,12 +25,17 @@ SECRET_KEY = '^p&%e#hvd8$#sbi0sn62gwn*^zglij^#&qex(yv*7om3ku#jve'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '9955ac18a26e.ngrok.io'
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    #'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +45,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'api',
+    # 'Predict',
+    # 'Book'
+
 ]
 
 MIDDLEWARE = [
@@ -55,7 +63,9 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "http://localhost:19006"
+    "http://localhost:19006", 
+    "http://localhost:19002"
+    
 ]
 
 ROOT_URLCONF = 'upload.urls'
