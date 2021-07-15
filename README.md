@@ -15,7 +15,7 @@ You will see something like this :
 
 ![Alt text](https://github.com/huavanson/ImageCaptioningApp/blob/main/ngrok.png "Optional title")
 
-Next, copy the link which ngrok creates (in this case http://fa61dae7a148.ngrok.io) add into ALLOWEDS_HOSTS at django/upload/settings.py. Then run :
+Next, copy the link which ngrok creates (in this case http://fa61dae7a148.ngrok.io) add into ALLOWED_HOSTS at django/upload/settings.py. Then run :
 
 `python manage.py runserver`
 
