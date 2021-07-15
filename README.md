@@ -15,7 +15,7 @@ You will see something like this :
 
 ![Alt text](https://github.com/huavanson/ImageCaptioningApp/blob/main/ngrok.png "Optional title")
 
-Next, copy the link which ngrok create(in this case http://fa61dae7a148.ngrok.io) add into INSTALLED_APPS and ALLOWEDS_HOSTS at django/upload/settings.py. Then run :
+Next, copy the link which ngrok creates (in this case http://fa61dae7a148.ngrok.io) add into INSTALLED_APPS and ALLOWEDS_HOSTS at django/upload/settings.py. Then run :
 
 `python manage.py runserver`
 
@@ -33,5 +33,7 @@ When you run expo start (or npm start), Expo CLI starts Metro Bundler, which is 
 
 Check **[this site](https://expo.io/)** for more information
 
-Opening the app on your phone/tablet, on your Android device, press "Scan QR Code" on the "Projects" tab of the Expo Go app and scan the QR code you see in the terminal or in Expo Dev Tools. You will see what we did on your device. Press the "Pick an image from camera roll" button to connect your device camera and take a picture. 
+Opening the app on your phone/tablet
+
+On your Android device, press "Scan QR Code" on the "Projects" tab of the Expo Go app and scan the QR code you see in the terminal or in Expo Dev Tools. You will see what we did on your device. Press the "Pick an image from camera roll" button to connect your device camera and take a picture. 
 The image is posted to the django server for processing and returns the results immediately.
