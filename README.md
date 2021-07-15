@@ -33,5 +33,5 @@ When you run expo start (or npm start), Expo CLI starts Metro Bundler, which is 
 
 Check **[this site](https://expo.io/)** for more information
 
-Opening the app on your phone/tablet, on your Android device, press "Scan QR Code" on the "Projects" tab of the Expo Go app and scan the QR code you see in the terminal or in Expo Dev Tools. You will see what we did on your device. Press the "Pick an image from camera roll" button to connect your device camera and take a image. 
+Opening the app on your phone/tablet, on your Android device, press "Scan QR Code" on the "Projects" tab of the Expo Go app and scan the QR code you see in the terminal or in Expo Dev Tools. You will see what we did on your device. Press the "Pick an image from camera roll" button to connect your device camera and take a picture. 
 The image is posted to the django server for processing and returns the results immediately.
