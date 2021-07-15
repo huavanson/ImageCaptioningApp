@@ -23,7 +23,7 @@ Your server will be ready !!!
 
 ## Client
 
-First, copy the ngrok link paste it into App.js so that the react app can request to your server. 
+First, copy the ngrok link then paste it into App.js so that the react app can request to your server. 
 
 `npm start` or `yarn start` or `expo start`
 
