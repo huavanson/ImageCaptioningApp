@@ -29,7 +29,7 @@ First, copy the ngrok link paste it into App.js so that the react app can reques
 
 When you run expo start (or npm start), Expo CLI starts Metro Bundler, which is an HTTP server that compiles the JavaScript code of our app using Babel and serves it to the Expo app. It also pops up Expo Dev Tools, a graphical interface for Expo CLI.Then you must turn on the **Tunnel** button. Under the tunnel setting, your computer will setup a tunnel to exp.direct, a domain using the ngrok tunnel service.
 
-**Please make sure you installed expo platform and download the ExpoGo from CH play** 
+**Please make sure you installed expo platform and downloaded the ExpoGo from CH play** 
 
 Check **[this site](https://expo.io/)** for more information
 
