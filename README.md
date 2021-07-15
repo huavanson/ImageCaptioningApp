@@ -3,7 +3,7 @@
 
 ## Server
 
-First, make sure your phone and your django server can connect together. We suggest use **ngork** to do this. You can download from **[hear](https://ngrok.com/download)**. 
+First, make sure your phone connect to your Django server. We suggest use **ngork** to do this. You can download from **[hear](https://ngrok.com/download)**. 
 
 Ngrok is a cross-platform application that enables developers to expose a local development server to the Internet with minimal effort. The software makes your locally-hosted web server appear to be hosted on a subdomain of ngrok.com, meaning that no public IP or domain name on the local machine is needed.
 
